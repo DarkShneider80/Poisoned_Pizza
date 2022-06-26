@@ -22,8 +22,12 @@ namespace Poisoned_Pizza
             Player PlayerA = new Player("Giocatore A");
             Player PlayerB = new Player("Giocatore B");
             TotalNrPizzas = 10 * rnd.Next(1, 4);
-
-            System.Console.WriteLine("Ci sono " + TotalNrPizzas + " Pizze Sul tavolo");
+            
+            System.Console.WriteLine("**POISONED PIZZA**");
+            System.Console.WriteLine("Ogni giocatore sceglie quante pizze mangiare ad ogni turno");
+            System.Console.WriteLine("Non è possibile scegliere lo stesso numero di pizze dell'altro giocatore");
+            System.Console.WriteLine("Chi Mangia l'ultima pizza che è avvelenata, perde" +'\n');
+            System.Console.WriteLine("Ci sono " + TotalNrPizzas + " Pizze Sul tavolo" + '\n');
 
             List<Combination> CombinationsList = ResetCombinations();
 
@@ -52,6 +56,13 @@ namespace Poisoned_Pizza
                     CombinationsList = ResetCombinations();
                     break;
 
+                }
+                else if(TotalNrPizzas == 1)
+                {
+                    System.Console.WriteLine(_player._Name + " Puoi mangiare solo la pizza avvelenata! ");
+                    response = "1";
+                    ret = true;
+                    break;
                 }
                 else if (TotalNrPizzas <= 0)
                 {
