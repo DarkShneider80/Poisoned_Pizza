@@ -1,0 +1,6 @@
+Poisoned Pizza v0.1
+
+- Dopo aver scaricato i file da github,avviare la Soluzione(.sln) e compilare i sorgenti in debug oppure release.
+- aprire un prompt dei comandi (Menù Start -> campo ricerca -> digitare "cmd")
+- Navigare fino alla cartella degli eseguibili compilati(..\Poisoned_Pizza\Poisoned_Pizza\bin) 
+- scegliere il percorso Debug oppure Release ed avviare l'applicativo con il comando "Poisoned_Pizza.exe"
